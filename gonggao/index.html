@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站公告</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+        body {
+            height: 150vh;/* 渐变高度...重要*/
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-bottom: 150px; /* 上下宽度 */
+            overflow: hidden;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1, .reset-button {
+            margin: ;
+        }
+
+        .announcement {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 15px;/* 按钮大小*/
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.2s ease-out forwards;
+            position: relative;
+            left: -200%;
+        }
+
+        .announcement:nth-child(3) {
+            animation-delay: 0.20s;
+        }
+
+        .announcement:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .announcement:nth-child(5) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes slideIn {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 0;
+            }
+        }
+
+        .date {
+            font-size: 0.9em;
+            color: #888;
+            font-weight: 300;
+        }
+
+        .title {
+            font-size: 1.5em;
+            margin: 10px 0;
+            font-weight: 500;
+        }
+
+        .disclaimer {
+            font-size: 0.8em;
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #8fd3f4;
+            transition: all 0.3s ease;
+            opacity: 0; /* set initial opacity to 0 */
+            animation: fadeIn 0.5s ease-in forwards; /* add fade-in animation */
+        }
+
+        .disclaimer:nth-child(1) {
+            animation-delay: 0.2s; /* add delay for the first button */
+        }
+
+        .disclaimer:nth-child(2) {
+            animation-delay: 0.4s; /* add delay for the second button */
+        }
+
+        .disclaimer:nth-child(3) {
+            animation-delay: 0.5s; /* add delay for the third button */
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .disclaimer:hover {
+            color: #000;
+            background-color: #84fab0;
+        }
+
+        h1 {
+            color: #fff;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .read-button {
+            float: right;
+            background-color: #84fab0;
+            border: none;
+            color: white;
+            padding: 3px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .read-button:hover {
+            background-color: #8fd3f4;
+        }
+
+        .reset-button {
+            background-color: #84fab0;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+                .reset-button:hover {
+            background-color: #8fd3f4;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+      .footer-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 800px; /* 限制最大宽度 */
+    margin: 0 auto; /* 居中显示 */
+    background: #0000;
+		  border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+
+        .footer-links .disclaimer {
+            margin-right: 10px;
+        }
+
+        /* 新增的CSS规则 */
+        details {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        summary {
+            font-size: 1.5em;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .news-content {
+            margin-top: 15px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>网站公告</h1>
+            <button class="reset-button" id="reset-button">重置所有公告</button>
+        </div>
+        
+        <!-- 新增 Every Day News -->
+        <details >
+            <summary>每日AI新闻</summary>
+            <div class="news-content">
+                <p>
+
+
+
+<!-- 公司每日新闻部分 -->
+<details>
+    <summary>FTC调查OpenAI的ChatGPT，关注隐私和数据安全问题</summary>
+    <div class="news-content">
+        <p>美国联邦贸易委员会（FTC）已开始对OpenAI的ChatGPT进行调查，以确认该公司是否通过发布虚假信息损害了人们的利益，并关注OpenAI是否存在不公平或欺骗性的隐私和数据安全行为。FTC向OpenAI发出了民事传票，详细询问了其数据安全措施、营销工作、训练人工智能模型的做法以及对用户个人信息的处理。OpenAI表示将与FTC合作，并相信其技术是安全且有利于消费者的。此外，白宫科技政策办公室也在制定相关战略，以解决AI带来的益处和弊端，包括黑客攻击能力增强、AI系统的歧视性决策以及AI生成内容对选举可能造成破坏等问题。</p>
+    </div>
+</details>
+
+<details>
+    <summary>马斯克主持xAI会议，讨论构建好的AGI目标</summary>
+    <div class="news-content">
+        <p>马斯克主持了xAI的重要会议，与创始团队讨论了xAI的方向性问题。他强调xAI的目标是构建一个对人性具有最大好奇心和兴趣的通用人工智能，以提高未来AGI的安全性。马斯克提出了xAI需要回答的问题，并解释了将某种东西称为AGI所需解决的基本问题。联合创始人格雷格·杨补充说，这样的AI还可以为现有理论研究提供新视角。马斯克继续表示，虽然一些公司试图通过暴力破解来开发AGI，但发展AGI仍然面临很大挑战。他相信随着xAI的发展，计算量将会大幅减少。马斯克还指出，在发展AGI过程中应关注全球生物计算量与数字计算量的比率以及每人创造的总能量。他认为Ray Kurzweil对于2029年出现AGI的预测相当准确。马斯克强调xAI作为一家公司需要保持小团队并具有挑战性氛围，并将快速制作可用产品作为首要目标。他还表示xAI将与OpenAI和Google的Bard竞争，并希望xAI能为消费者和企业提供有用的人工智能。马斯克重申了对AGI的忧虑，并强调AI的发展必须小心谨慎。</p>
+    </div>
+</details>
+
+
+
+
+
+<details>
+    <summary>AI训练面临数据短缺，Stuart Russell发出警告</summary>
+    <div class="news-content">
+        <p>UC伯克利计算机科学家Stuart Russell表示，像ChatGPT这样的AI工具的训练可能很快耗尽全宇宙的文本，因为数据量不够而受阻。这对生成式AI开发人员在未来几年收集数据和训练人工智能的方式产生影响。Russell认为人工智能将在语言输入和输出方面取代人类。然而，AI开发人员在数据收集方面面临审查和限制，包括未经同意使用创意和平台数据的问题。此外，研究估计机器学习数据集可能会在2026年之前耗尽所有高质量语言数据。这引发了对AI训练中数据短缺问题的关注。马斯克也限制了用户每天查看推文的数量，以应对社交媒体网站上的数据抓取问题。</p>
+    </div>
+</details>
+
+
+
+
+
+<details>
+    <summary>程序员生存指南：在GPT时代保持竞争力</summary>
+    <div class="news-content">
+        <p>IEEE Spectrum发布了一篇GPT时代程序员生存指南，强调在大模型为核心的编码时代，程序员仍然不会被完全替代。尽管现在有许多基于AI的编码助手，但理解编程的基本原则和前提仍然至关重要。程序员需要具备阅读、理解代码的能力，并能进行分析、调试和解决问题。良好的软件工程实践也变得更加重要，包括系统设计和软件架构规划。虽然有许多工具如GitHub Copilot、ChatGPT和Bard等应用于编程领域，但每个工具的交互方式不同。程序员在工作和私人时间中广泛使用AI编码工具，但仍需要保持自身技能和竞争力。</p>
+    </div>
+</details>
+
+
+
+<details>
+    <summary>OpenAI发布ChatGPT代码解释器，实现自然语言驱动编程</summary>
+    <div class="news-content">
+        <p>复旦大学教授、上海市数据科学重点实验室主任肖仰华教授认为，OpenAI的ChatGPT代码解释器的发布意味着其从普通助手升级为专业助手。用户可以使用自然语言向ChatGPT下达指令，完成复杂编程任务，包括数学运算、数据分析、图表绘制和股票市场分析等。这被认为是GPT-4有史以来最强大的功能。肖仰华指出，这意味着即使非程序员也可以利用ChatGPT完成专业性强的工作，如数据科学专业。此次升级得益于对专业文献等数据的深度解析和学习，使得ChatGPT具备了通过自然语言交互驱动图表和公式制作的能力。肖仰华认为对语料的深度解析能力是决定大模型能力的核心因素之一。他指出OpenAI一直努力寻求更多优质数据，并深入解析已有数据以提升模型能力。此次升级可能会消除语言鸿沟，并重塑产业形态。
+            
+        </p>
+    </div>
+</details>
+
+<!-- 添加更多新闻... -->
+
+
+
+
+
+
+
+
+                </p>
+            </div>
+        </details>
+
+        <div class="announcement" id="announcement1">
+            <button class="read-button">已读</button>
+            <p class="date">2023年7月19日</p>
+            <p class="title">服务协议</p>
+            <p><style>
+a {
+  text-decoration: none;
+  color: red;
+}
+</style>
+
+为了不断提高服务质量，保障用户的信息安全，<br>本站已更新<a href="https://app.mxnf.one/sxs.html">生成式人工智能服务使用政策</a> ，<br>您可点击同意后继续使用本站。
+</p>
+        </div>
+
+        <div class="announcement" id="announcement2">
+            <button class="read-button">已读</button>
+            <p class="date">2023年7月18日</p>
+            <p class="title">温馨通知</p>
+            <p>近期发现一些电商平台商家高价售卖本站服务，特此通知，本站在淘宝、拼多多无任何店铺，请勿上当受骗</p>
+        </div>
+
+        <div class="announcement" id="announcement3">
+            <button class="read-button">已读</button>
+            <p class="date">2023年7月17日</p>
+            <p class="title">网站更新</p>
+            <p>本次更新优化指令结构，新增10多款快捷指令</p>
+        </div>
+    </div>
+    
+    <div class="footer-links footer-fixed">
+        <a class="disclaimer" href="https://kdocs.cn/l/cv1JP3ylgjAM">免责声明</a>
+        <a class="disclaimer" href="https://kdocs.cn/l/cq3Uj1D5KCro">隐私政策</a>
+        <a class="disclaimer" href="gonggao/1.html">服务协议</a>
+    </div>
+
+    <script>
+        // 检查浏览器是否支持localStorage
+        if (typeof(Storage) !== "undefined") {
+            // 浏览器支持localStorage
+            var announcements = document.querySelectorAll('.announcement');
+            announcements.forEach(function(announcement) {
+                var id = announcement.id;
+                var read = localStorage.getItem(id);
+                if (read === 'true') {
+                    // 如果该公告已读，立即移除
+                    announcement.remove();
+                } else {
+                    // 如果该公告未读，添加按钮点击事件处理函数
+                    var button = announcement.querySelector('.read-button');
+                    button.addEventListener('click', function() {
+                        // 动画使公告缩小并消失
+                        announcement.style.transition = 'all 0.5s';
+                        announcement.style.transform = 'scale(0)';
+                        announcement.style.opacity = '0';
+                        // 动画结束后，移除公告，并在localStorage中标记该公告已读
+                        setTimeout(function() {
+                            announcement.remove();
+                            localStorage.setItem(id, 'true');
+                        }, 500);
+                    });
+                }
+            });
+        } else {
+            // 浏览器不支持localStorage
+            console.log('Your browser does not support localStorage.');
+        }
+
+       
+// 添加重置按钮的点击事件处理函数
+        var resetButton = document.getElementById('reset-button');
+        resetButton.addEventListener('click', function() {
+            // 清除所有localStorage数据
+            localStorage.clear();
+            // 刷新页面
+            location.reload();
+        });
+    </script>
+</body>
+
+</html>
