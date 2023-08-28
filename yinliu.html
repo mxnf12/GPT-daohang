@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q群586028078</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #000;
+            color: #0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* 矩阵下落效果 */
+        .matrix {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.8;
+        }
+        .matrix span {
+            position: absolute;
+            top: -20%;
+            font-size: 1em;
+            color: #0f0;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { top: -20%; }
+            100% { top: 120%; }
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-shadow: 0 0 10px #0f0;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 矩阵下落背景 -->
+    <div class="matrix"></div>
+
+    <h1>您来晚啦，活动已经凉了！</h1>
+    <p>扫码进群实时获取最新活动。</p>
+<img src="/qrcode_1693246169913.jpg" alt="扫码进群">
+    <!-- JavaScript用于生成矩阵雨效果 -->
+    <script>
+        const matrix = document.querySelector('.matrix');
+        const numberOfSpans = 100; // 生成的数字串数量
+
+        for (let i = 0; i < numberOfSpans; i++) {
+            const span = document.createElement('span');
+            const randomLeft = Math.random() * 100;
+            const randomDuration = 5 + Math.random() * 10;
+            const randomDelay = Math.random() * 10;
+            const randomNumbers = Array.from({ length: Math.floor(10 + Math.random() * 20) }, () => Math.floor(Math.random() * 10)).join('');
+            span.textContent = randomNumbers;
+            span.style.left = `${randomLeft}%`;
+            span.style.animationDuration = `${randomDuration}s`;
+            span.style.animationDelay = `-${randomDelay}s`;
+            matrix.appendChild(span);
+        }
+    </script>
+</body>
+</html>
