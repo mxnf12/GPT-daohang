@@ -5,14 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q群586028078</title>
     <style>
-        /* 添加到你的<style>标签内部 */
-img {
-    width: 100%; /* 使图片宽度适应其容器 */
-    max-width: 300px; /* 可以根据你的图片原始大小来调整 */
-    display: block; /* 去掉图片下方的小间隙 */
-    margin: 20px auto; /* 上下间隔20px并在左右居中 */
-}
-
         body {
             font-family: 'Courier New', Courier, monospace;
             background-color: #000;
@@ -24,6 +16,19 @@ img {
             height: 100vh;
             overflow: hidden;
             position: relative;
+        }
+
+        .img-container {
+            width: 100%;
+            max-width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
         }
 
         /* 矩阵下落效果 */
@@ -74,7 +79,10 @@ img {
 
     <h1>您来晚啦，活动已经凉了！</h1>
     <p>扫码进群实时获取最新活动。</p>
-<img src="/qrcode_1693246169913.jpg" alt="扫码进群">
+    <div class="img-container">
+        <img src="/qrcode_1693246169913.jpg" alt="扫码进群">
+    </div>
+
     <!-- JavaScript用于生成矩阵雨效果 -->
     <script>
         const matrix = document.querySelector('.matrix');
