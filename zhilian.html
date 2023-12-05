@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>嵌入页面</title>
+  <style>
+    .header {
+      padding: 20px;
+      background-color: #f1f1f1;
+    }
+    .header h2 {
+      margin: 0;
+      text-align: center;
+    }
+
+    /* 添加新样式以放大并加粗段落文本 */
+    .header p {
+      font-size: larger; /* 增大字体大小 */
+      font-weight: bold;   /* 加粗字体 */
+    }
+
+   @media screen and (max-width: 768px) {
+     /* 在宽度小于等于768像素时应用的样式 */
+     .header h2 {
+       font-size: 20px; /* 缩小字体大小 */
+       line-height:normal;/* 恢复默认行高*/
+     }
+     
+   /* 对移动设备进行响应，也调整 p 标签中文字的大小和加粗程度*/
+     .header p{
+       font-size : medium; //适当减小移动设备上的文字尺寸
+       // 如果希望在所有屏幕尺寸下都保持相同风格，则不需要此段代码。
+     }
+   } 
+ </style>
+
+</head>
+
+<body>
+
+<div class="header">
+   <h2>文件直链生成</h2> 
+   <p>使用方法：</p>
+   <!-- 其他<p>标签内容 -->
+   <p>1.上传需要识别的图片或文件，点击上传按钮</p>
+   <p>2.复制https开头的直链链接，返回聊天</p>
+   <p>3.将链接复制进输入框,然后备注好问题发送即可</p>
+   <p>注意！！！：使用本功能需要将模型切换至gpt4-all模型</p>
+   <p>下方的文件直链提取平台为百度搜索，与本站无任何联系</p>
+   
+</div>
+
+<iframe src="https://up.ly93.cc/" width="100%" height="600px"></iframe>
+
+</body>
